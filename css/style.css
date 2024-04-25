@@ -1,3 +1,11 @@
+/* definición de variables*/
+:root {
+    --main-bg-color: #fff; /* principal color de fondo = blanco */
+    --main-text-color: #020202;
+    --main-accent-color: rgb(85 24 197); /* principal color de acento = violeta oscuro */
+    --main-hover-color: rgb(62 10 157); /* principal color de hover */
+  }
+
 /* Reseteo mínimo de estilos generales para normalizar espacios*/
 html {
     box-sizing: border-box;
@@ -72,28 +80,56 @@ html {
   }
 /* grid */
   .wrapper {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: grid;    
     max-width: 1440px;
     margin: 0 auto;
   }
+/* nav basica */
+nav {
+    position: relative;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    list-style: none;
+}
+nav ul li.logo {
+    order: -1;
+    font-size: 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+nav ul .logo img {
+    max-height: 40px;
+}
+nav ul li {
+    padding: 1.25rem 0.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
 /* theming de elementos básicos */
-body, h1, h2, h3, h4, h5, p {
+body, h1, h2, h3, h4, h5, p, a {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: var(--main-text-color);
 }
-/* definición de variables*/
-:root {
-    --main-bg-color: #fff; /* principal color de fondo = blanco */
-    --main-text-color: #020202;
-    --main-accent-color: rgb(85 24 197); /* principal color de acento = violeta oscuro */
-    --main-hover-color: rgb(62 10 157); /* principal color de hover */
-  }
+a {
+    text-decoration: none;
+}
 
 /* Ancho máximo wrapper */
 .wrapper {
-    max-width: 1440px;;
+    max-width: 1440px;
+    padding: 40px 0px;
+}
+.wrapper.nav {
+    padding: 0px;
 }
 
 /* elementos de uso común */
@@ -101,6 +137,10 @@ body, h1, h2, h3, h4, h5, p {
     background-color: var(--main-accent-color);
     color: #fff;
     border: 1px solid var(--main-accent-color);
+    border-radius: 18px;
+    padding: 8px 19px;
+    text-decoration: none;
+    font-weight: bold;
 }
 .boton:hover {
     background-color: transparent;
