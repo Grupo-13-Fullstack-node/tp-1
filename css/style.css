@@ -82,7 +82,7 @@ html {
     font-style: italic;
   }
 /* grid */
-  .wrapper {
+  .contenedor {
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -98,7 +98,7 @@ html {
 .seccion.nav {
   background: #fff;
 }
-.seccion.nav .wrapper {
+.seccion.nav .contenedor {
   padding: 0px;
 }
 nav {
@@ -139,8 +139,8 @@ a {
     text-decoration: none;
 }
 
-/* Ancho máximo wrapper */
-.wrapper {
+/* Ancho máximo contenedor */
+.contenedor {
     max-width: 1440px;
     padding: 20px 0px;
 }
@@ -321,7 +321,7 @@ div.scrollable {
   768px - mobile
   */
   @media screen and (max-width:1440px) { 
-    .wrapper {
+    .contenedor {
       padding: 20px 15px;
     }
   }
