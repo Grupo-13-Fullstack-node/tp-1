@@ -1,1 +1,26 @@
 
+/* estilos dektop acá */
+
+/*media queries*/
+/* la decisión fue armar el responsive abordándolo como desktop first.
+Los mediaqueries entonces son armados con max-width, pasando por los breakpoints:
+1440px - contenedor máximo
+992px - tablet
+768px - mobile
+*/
+@media screen and (max-width:1440px) { 
+
+
+}
+
+/* ajustes para tablet*/
+@media (max-width:992px) { 
+
+
+}
+/* ajustes para mobile */
+@media (max-width:768px) { 
+
+
+
+}
