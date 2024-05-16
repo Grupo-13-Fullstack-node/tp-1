@@ -1,0 +1,3 @@
+- revisar conflictos con style.css
+- ver compatibilidad de temas en el formulario de registro con los colores de style
+- armar el footer

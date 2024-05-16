@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Cargo de Bt donde esta el collapse de la hamb
             var collapse = new bootstrap.Collapse(navbar.querySelector('.navbar-collapse'));
 
-            // Hover en el toggler
+            // Hover en el toggler ( capaz lo saque xq es medio insoportable)
             function openTogglerOnHover() {
                 var target = navbarToggler.getAttribute('data-bs-target');
                 var collapseElement = document.querySelector(target);
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             navbarToggler.addEventListener('mouseenter', openTogglerOnHover);
 
-            // Cierro el menú desplegable al hacer clic en otra parte de la página
+            // Cierro el menú desplegable al hacer clic en otra parte de la página ( este si se queda)
             document.addEventListener('click', function (event) {
                 var isClickInsideNavbar = navbar.contains(event.target);
                 if (!isClickInsideNavbar && collapse._isShown) {
