@@ -19,7 +19,6 @@
 /* estilos dektop acá */
 .contenedor {
     margin: 0 auto;
-    /* background-color: var(--bg-color-nav); */
 }
 
 .contenedor-layout {
@@ -30,7 +29,7 @@
     min-height: 100%;
     padding: 20px 24px 48px;
 }
-/* tengo que ver si la gama de colores queda armare Custom Properties,asi ordeno un poco esto y queda mas prolijo*/
+
 .contenedor-tarjeta {
     background-image: var(--bg-lineal);
     background:var(--bg-radial);
@@ -104,7 +103,7 @@
     align-items: center;
     align-content: center;
     justify-content: center;
-    width: 100%;
+    width: 70%;
     height: 2rem;
     border-radius: var(--bordes);
     background-color:var(--bg-color-nav) !important;
@@ -332,7 +331,7 @@ Los mediaqueries entonces son armados con max-width, pasando por los breakpoints
         padding: 10px 4px 24px;
     }
 
-    .contenedor-tarjeta {
+    .contenedor-tarjeta, .contenedor-tarjeta2 {
         padding: 10px;
         width: 340px;
     }
@@ -371,5 +370,10 @@ Los mediaqueries entonces son armados con max-width, pasando por los breakpoints
         box-shadow:var(--box-shadow-inactivo) !important;
     }
 }
-/* revisar despues a ver si no se rompe en res > a 400*/
-@media(width >=400) {}
+@media(max-width: 320px) {
+.contenedor-tarjeta2{
+        padding: 0;
+        width: 160px;
+        height: 360px;
+    }
+}

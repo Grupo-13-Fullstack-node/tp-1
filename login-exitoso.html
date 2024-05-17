@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Document</title>
+    <title>Login exitoso</title>
 </head>
 
 <body>
@@ -23,12 +24,12 @@
             <main class="contenedor-tarjeta2">
                 <div class="logo"></div>
                 <h1>Login exitoso</h1>
-                <p>Te damos la bienvenida usuario <span id= "email"></span> </p>
+                <p>Te damos la bienvenida usuario <span id="email"></span> </p>
 
                 <div class="separador">
                     <p>-----------------------------------</p>
                 </div>
-                <button class="btn" onclick="volver()">Comenzar</button>
+                <button class="btn" onclick="comenzar()" id="log-activo">Comenzar</button>
             </main>
         </div>
     </div>
@@ -39,7 +40,6 @@
     <script>
         // traigo los datos del localStorage
         const email = localStorage.getItem('email');
-        const password = localStorage.getItem('pass');
 
         // Reviso si capture los datos antes de mostrarlos
         if (email) {
@@ -48,13 +48,7 @@
             document.getElementById('email').textContent = 'No se ha capturado el correo.';
         }
 
-        // if (password) {
-        //     document.getElementById('pass').textContent = password;
-        // } else {
-        //     document.getElementById('pass').textContent = 'No se ha capturado la contraseña.';
-        // }
     </script>
-
     <script src="js/NavBar.js"></script>
     <script src="js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

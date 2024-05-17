@@ -3,6 +3,7 @@
     min-width: 190px;
     max-width: 1920px;
     position: fixed;
+    margin: 0 auto;
     width: 98dvw;
     z-index: 1000;
     background-color: var(--bg-nav);
@@ -13,12 +14,6 @@
 
 a {
     text-decoration: none !important;
-    /*Crear efecto para links (scale/luz/sombra?)*/
-}
-
-.logo-animado {
-    margin-right: 10px;
-    /*Faltaria cargar algun efecto de luz/sombra al logo*/
 }
 
 .logo-animado:hover {
@@ -57,7 +52,7 @@ a {
 /* ajustes para tablet*/
 @media (max-width:992px) {
     .navbar {
-        position: relative;
+        position: fixed;
         height: 50px;
     }
 
@@ -108,8 +103,6 @@ a {
 @media (max-width:768px) {
 
     nav ul li {
-
-        position: relative;
         justify-content: center;
         background-color: var(--bg-nav-solid);
         border-radius: 0.5rem;
