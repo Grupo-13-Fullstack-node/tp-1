@@ -47,3 +47,7 @@ document.getElementById('login-button').addEventListener('click', function(event
 
     window.location.href = '/login-exitoso.html';
 });
+
+function volver() {
+    window.location.href = "/wallet.html";
+}

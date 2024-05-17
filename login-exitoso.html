@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,32 +17,25 @@
 </head>
 
 <body>
-    <div id="navbar-container"></div>
+    <section id="navbar-container"></section>
     <div class="contenedor">
         <div class="contenedor-layout">
-            <div class="contenedor-tarjeta2">
+            <main class="contenedor-tarjeta2">
                 <div class="logo"></div>
                 <h1>Login exitoso</h1>
-                <p>Te damos la bienvenida usuario <span id="email"></span> </p>
+                <p>Te damos la bienvenida usuario <span id= "email"></span> </p>
 
                 <div class="separador">
                     <p>-----------------------------------</p>
                 </div>
-                <button class="btn" onclick="volver()">Volver</button>
-
-
-            </div>
-
-
+                <button class="btn" onclick="volver()">Comenzar</button>
+            </main>
         </div>
     </div>
-    <div id="footer"></div>
+    <section id="footer"></section>
+
     <!-- Zona de scripts -->
-    <script>
-        function volver() {
-            window.location.href = "/index.html";
-        }
-    </script>
+
     <script>
         // traigo los datos del localStorage
         const email = localStorage.getItem('email');
@@ -56,11 +48,11 @@
             document.getElementById('email').textContent = 'No se ha capturado el correo.';
         }
 
-        if (password) {
-            document.getElementById('pass').textContent = password;
-        } else {
-            document.getElementById('pass').textContent = 'No se ha capturado la contraseña.';
-        }
+        // if (password) {
+        //     document.getElementById('pass').textContent = password;
+        // } else {
+        //     document.getElementById('pass').textContent = 'No se ha capturado la contraseña.';
+        // }
     </script>
 
     <script src="js/NavBar.js"></script>
