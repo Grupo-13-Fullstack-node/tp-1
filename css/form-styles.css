@@ -1,7 +1,25 @@
+:root{
+    --box-shadow-activo: 0 4px 8px rgba(0, 217, 255, 0.699),
+    0 6px 20px rgba(169, 229, 253, 0.637);
+    --box-shadow-inactivo: 0 4px 8px rgba(255, 255, 255, 0.699),
+    0 6px 20px rgba(212, 204, 204, 0.315);
+    --bg-color-nav:#a09f9f;
+    --fuente-activa:#0ff;
+    --bordes: 5px;
+    --bordes-grandes:24px;
+    --borde-lnk:2px rgba(110, 50, 50, 0.555);
+    --bg-radial: radial-gradient(at 100% 0, #fff2, #fff0 50%),
+    radial-gradient(at 0% 100%, #0002, #0000 50%),
+    #545153;
+    --bg-lineal:linear-gradient(45deg, #223, #112);
+    --bg-nav:rgba(147, 147, 173, 0.438);
+    --bg-nav-solid:rgba(147, 147, 173, 0.884);
+}
+
 /* estilos dektop acá */
 .contenedor {
     margin: 0 auto;
-    background-color: aliceblue;
+    /* background-color: var(--bg-color-nav); */
 }
 
 .contenedor-layout {
@@ -14,26 +32,20 @@
 }
 /* tengo que ver si la gama de colores queda armare Custom Properties,asi ordeno un poco esto y queda mas prolijo*/
 .contenedor-tarjeta {
-    background-image: linear-gradient(45deg, #223, #112);
-    background:
-        radial-gradient(at 100% 0, #fff2, #fff0 50%),
-        radial-gradient(at 0% 100%, #0002, #0000 50%),
-        #545153;
+    background-image: var(--bg-lineal);
+    background:var(--bg-radial);
     border: 1px solid rgb(0, 0, 0);
-    border-radius: 24px;
+    border-radius: var(--bordes-grandes);
     padding: 40px;
     width: 425px;
     text-align: center;
 }
 
 .contenedor-tarjeta2 {
-    background-image: linear-gradient(45deg, #223, #112);
-    background:
-        radial-gradient(at 100% 0, #fff2, #fff0 50%),
-        radial-gradient(at 0% 100%, #0002, #0000 50%),
-        #545153;
+    background-image: var(--bg-lineal);
+    background:var(--bg-radial);
     border: 1px solid rgb(0, 0, 0);
-    border-radius: 24px;
+    border-radius: var(--bordes-grandes);
     padding: 40px;
     width: 425px;
     height: 80dvh;
@@ -68,8 +80,7 @@
 }
 
 .btn {
-
-    background-color: antiquewhite !important;
+    background-color: var(--bg-color-nav) !important;
     justify-content: center;
     align-items: center;
 }
@@ -95,14 +106,12 @@
     justify-content: center;
     width: 100%;
     height: 2rem;
-    border-radius: 5px;
-    background-color: #a09f9f !important;
+    border-radius: var(--bordes);
+    background-color:var(--bg-color-nav) !important;
     color: rgb(0, 0, 0) !important;
     text-decoration: none;
-    border: 2px rgba(110, 50, 50, 0.555) !important;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.699),
-        0 6px 20px rgba(212, 204, 204, 0.315) !important;
-
+    border: var(--borde-lnk) !important;
+    box-shadow:var(--box-shadow-inactivo) !important;
 }
 
 .registro-externo {
@@ -117,20 +126,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #a09f9f !important;
-    border-radius: 5px;
-    color: #0ff;
-    box-shadow: 0 4px 8px rgba(0, 217, 255, 0.699),
-        0 6px 20px rgba(169, 229, 253, 0.637);
+    background-color: var(--bg-color-nav) !important;
+    border-radius:var(--bordes);
+    color: var(--fuente-activa);
+    box-shadow: var(--box-shadow-activo);
 }
 
 .disabled-link {
     pointer-events: none;
     color: rgb(0, 0, 0) !important;
     text-decoration: none;
-    border: 2px rgba(110, 50, 50, 0.555) !important;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.699),
-        0 6px 20px rgba(212, 204, 204, 0.315) !important;
+    border:var(--borde-lnk) !important;
+    box-shadow: var(--box-shadow-inactivo) !important;
 }
 
 
@@ -140,16 +147,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #a09f9f;
-    border-radius: 5px;
+    background-color: var(--bg-color-nav);
+    border-radius: var(--bordes);
 }
 
 .btn:hover, .login-google:hover {
     transform: scale(1.1);
     transition: 500ms;
-    box-shadow: 0 4px 8px rgba(0, 217, 255, 0.699),
-        0 6px 20px rgba(169, 229, 253, 0.637) !important;
-    color: #0ff !important;
+    box-shadow: var(--box-shadow-activo) !important;
+    color: var(--fuente-activa) !important;
 }
 
 /*--------form con validacion visual--------*/
@@ -165,8 +171,7 @@ label:has(:focus:invalid) {
 
 label:has(:focus:valid) {
     color: green;
-    box-shadow: 0 4px 8px rgba(0, 217, 255, 0.699),
-        0 6px 20px rgba(169, 229, 253, 0.637);
+    box-shadow:var(--box-shadow-activo);
     border-radius: 5px;
 }
 
@@ -344,7 +349,7 @@ Los mediaqueries entonces son armados con max-width, pasando por los breakpoints
     }
 
     .btn {
-        background-color: antiquewhite !important;
+        background-color:var(--bg-color-nav) !important;
         justify-content: center;
         align-items: center;
     }
@@ -358,13 +363,12 @@ Los mediaqueries entonces son armados con max-width, pasando por los breakpoints
     }
 
     .disabled-link {
-        background-color: #a09f9f !important;
+        background-color: var(--bg-color-nav) !important;
         pointer-events: none;
         color: rgb(0, 0, 0) !important;
         text-decoration: none;
-        border: 2px rgba(110, 50, 50, 0.555) !important;
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.699),
-            0 6px 20px rgba(212, 204, 204, 0.315) !important;
+        border: var(--borde-lnk) !important;
+        box-shadow:var(--box-shadow-inactivo) !important;
     }
 }
 /* revisar despues a ver si no se rompe en res > a 400*/
