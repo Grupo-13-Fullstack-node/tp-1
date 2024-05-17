@@ -376,6 +376,7 @@ Los mediaqueries entonces son armados con max-width, pasando por los breakpoints
         width: 160px;
         height: 360px;
     }
+}
 @media screen and (max-width:1440px) { 
 }
 
