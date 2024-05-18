@@ -7,6 +7,7 @@
     margin-bottom: 40px; /* Añadido espacio inferior */
 }
 
+
 .cuatro-columnas h3 {
     margin-bottom: 20px; /* Espacio inferior para el título */
 }
@@ -45,6 +46,9 @@
 }
 
 
+/* estilos dektop acá */
+
+
 /*media queries*/
 /* la decisión fue armar el responsive abordándolo como desktop first.
 Los mediaqueries entonces son armados con max-width, pasando por los breakpoints:
@@ -59,6 +63,7 @@ Los mediaqueries entonces son armados con max-width, pasando por los breakpoints
 
 /* ajustes para tablet*/
 @media (max-width:992px) { 
+
     .cuatro-columnas {
         grid-template-columns: repeat(2, 1fr); /* Cambiado a 2 columnas para tablet */
     }
@@ -82,3 +87,6 @@ Los mediaqueries entonces son armados con max-width, pasando por los breakpoints
         text-align: center; /* Centra el contenido */
     }
 }
+
+
+

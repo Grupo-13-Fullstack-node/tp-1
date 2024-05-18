@@ -21,7 +21,12 @@ html {
     padding: 0;
     font-weight: normal;
   }
-  
+  .contenedor{
+    position: relative;
+    top:2rem;
+    /*Acá sólo modifique esto para no superponer la navbar*/
+  }
+
   ol, ul {
     list-style: none;
   }
@@ -29,6 +34,9 @@ html {
   img {
     max-width: 100%;
     height: auto;
+  }
+  *, *::before, *::after {
+    border-spacing: 0;
   }
 /* font classes */
 .roboto-light {
@@ -78,13 +86,65 @@ html {
     font-weight: 700;
     font-style: italic;
   }
+/* theming de elementos básicos */
+body, h1, h2, h3, h4, h5, p, a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--main-text-color);
+}
+h1 {
+  margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+}
+/* classes de uso común */
+.boton {
+  background-color: var(--main-accent-color);
+  color: #fff;
+  border: 1px solid var(--main-accent-color);
+  border-radius: 18px;
+  padding: 8px 19px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.boton:hover {
+  background-color: transparent;
+  color: var(--main-accent-color);
+  border: 1px solid var(--main-accent-color);
+  text-decoration: none;
+}
+.centrado {
+  text-align: center;
+}
+div.scrollable {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
 /* grid */
-  .wrapper {
-    display: grid;    
+  .contenedor {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 20px 0px;
+  }
+  body {
+    background: rgb(238,234,251);
+    background: linear-gradient(180deg, rgb(247 246 252) 0%, rgba(247, 246, 252, 0.9) 30%, rgba(255, 255, 255, 0.01866684173669464) 100%) no-repeat;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 /* nav basica */
+.seccion.nav {
+  background: #fff;
+}
+.seccion.nav .contenedor {
+  padding: 0px;
+}
 nav {
     position: relative;
 }
@@ -112,38 +172,30 @@ nav ul li {
     display: flex;
     align-items: center;
 }
-/* theming de elementos básicos */
-body, h1, h2, h3, h4, h5, p, a {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--main-text-color);
-}
-a {
-    text-decoration: none;
-}
 
-/* Ancho máximo wrapper */
-.wrapper {
-    max-width: 1440px;
-    padding: 40px 0px;
-}
-.wrapper.nav {
-    padding: 0px;
-}
 
-/* elementos de uso común */
-.boton {
-    background-color: var(--main-accent-color);
-    color: #fff;
-    border: 1px solid var(--main-accent-color);
-    border-radius: 18px;
-    padding: 8px 19px;
-    text-decoration: none;
-    font-weight: bold;
-}
-.boton:hover {
-    background-color: transparent;
-    color: var(--main-accent-color);
-    border: 1px solid var(--main-accent-color);
-}
+
+  /*media queries*/
+  /* la decisión fue armar el responsive abordándolo como desktop first.
+  Los mediaqueries entonces son armados con max-width, pasando por los breakpoints:
+  1440px - contenedor máximo
+  992px - tablet
+  768px - mobile
+  */
+  @media screen and (max-width:1440px) { 
+    .contenedor {
+      padding: 20px 15px;
+    }
+  }
+
+  /* ajustes para tablet*/
+  @media (max-width:992px) { 
+    
+
+  }
+  /* ajustes para mobile */
+  @media (max-width:768px) { 
+    
+  
+
+  }
