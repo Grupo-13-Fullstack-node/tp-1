@@ -7,7 +7,6 @@
     margin-bottom: 40px; /* Añadido espacio inferior */
 }
 
-
 .cuatro-columnas h3 {
     margin-bottom: 20px; /* Espacio inferior para el título */
 }
@@ -25,7 +24,8 @@
     margin-bottom: 20px; /* Espacio inferior para separar de otros elementos */
 }
 
-.descarga h3 {
+.descarga h2 {
+    color: var(--main-accent-color); /* Color del título */
     margin-bottom: 10px; /* Espacio inferior para el título */
 }
 
@@ -45,31 +45,28 @@
     height: auto; /* Para mantener la proporción */
 }
 
-
-/* estilos dektop acá */
-
-
-/*media queries*/
-/* la decisión fue armar el responsive abordándolo como desktop first.
-Los mediaqueries entonces son armados con max-width, pasando por los breakpoints:
-1440px - contenedor máximo
-992px - tablet
-768px - mobile
-*/
-@media screen and (max-width:1440px) { 
-
-
+.wallet-funcionalidad {
+    margin-bottom: 15px; /* Espaciado inferior */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    color: var(--main-text-color); /* Color del texto */
 }
 
-/* ajustes para tablet*/
-@media (max-width:992px) { 
+/* Estilos específicos para ventajas */
+.ventajas {
+    font-weight: 500; /* Peso de fuente medio */
+    color: var(--main-accent-color); /* Color del texto */
+}
 
+/* media queries */
+/* ajustes para tablet */
+@media (max-width: 992px) {
     .cuatro-columnas {
         grid-template-columns: repeat(2, 1fr); /* Cambiado a 2 columnas para tablet */
     }
 }
+
 /* ajustes para mobile */
-@media (max-width:768px) { 
+@media (max-width: 768px) {
     .cuatro-columnas {
         grid-template-columns: 1fr; /* Cambiado a una sola columna para móvil */
     }
@@ -87,6 +84,3 @@ Los mediaqueries entonces son armados con max-width, pasando por los breakpoints
         text-align: center; /* Centra el contenido */
     }
 }
-
-
-
