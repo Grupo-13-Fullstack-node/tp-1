@@ -1,86 +1,131 @@
-/* estilos desktop */
-.cuatro-columnas {
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: repeat(4, 1fr); /* Cambiado a 4 columnas */
-    grid-gap: 1rem 30px;
-    margin-bottom: 40px; /* Añadido espacio inferior */
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #1d1d1d;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-.cuatro-columnas h3 {
-    margin-bottom: 20px; /* Espacio inferior para el título */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.cuatro-columnas table {
-    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+h1 {
+    color:#333
 }
 
-.cuatro-columnas table td {
-    padding: 10px; /* Espaciado interior para las celdas */
+h2, h3 {
+    color: #333;
+    text-align: center;
 }
 
-/* Estilos para la sección de descargas */
-.descarga {
-    margin-bottom: 20px; /* Espacio inferior para separar de otros elementos */
+p {
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
-.descarga h2 {
-    color: var(--main-accent-color); /* Color del título */
-    margin-bottom: 10px; /* Espacio inferior para el título */
-}
-
-.descarga table {
-    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
-    border-collapse: collapse; /* Colapso de bordes */
-}
-
-.descarga td {
-    padding: 10px; /* Espaciado interior para las celdas */
-    text-align: center; /* Centrado del contenido */
-}
-
-/* Estilos de las imágenes de las tiendas de aplicaciones */
-.descarga img {
-    max-width: 100%; /* Para que las imágenes se ajusten al ancho del contenedor */
-    height: auto; /* Para mantener la proporción */
+/* Funcionalidades */
+.funcionalidades {
+    margin-bottom: 40px;
 }
 
 .wallet-funcionalidad {
-    margin-bottom: 15px; /* Espaciado inferior */
-    font-size: 1.1rem; /* Tamaño de fuente */
-    color: var(--main-text-color); /* Color del texto */
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    list-style: none;
+    padding-left: 20px;
+    position: relative;
 }
 
-/* Estilos específicos para ventajas */
-.ventajas {
-    font-weight: 500; /* Peso de fuente medio */
-    color: var(--main-accent-color); /* Color del texto */
+.wallet-funcionalidad::before {
+    content: "✔";
+    color: #1d1d1d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
 }
 
-/* media queries */
-/* ajustes para tablet */
+/* Sección de descarga y ventajas */
+.cuatro-columnas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.descarga-item, .ventaja-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.descarga-item:hover, .ventaja-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.descarga-titulo, .ventaja-titulo {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 4rem;
+}
+
+.logo {
+    max-width: 100px;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Animaciones */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+    .contenedor {
+        padding: 10px;
+    }
+}
+
 @media (max-width: 992px) {
     .cuatro-columnas {
-        grid-template-columns: repeat(2, 1fr); /* Cambiado a 2 columnas para tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* ajustes para mobile */
 @media (max-width: 768px) {
     .cuatro-columnas {
-        grid-template-columns: 1fr; /* Cambiado a una sola columna para móvil */
-    }
-
-    .cuatro-columnas h3 {
-        font-size: 1.5rem; /* Reducir tamaño del título */
-    }
-
-    .descarga table {
-        display: block; /* Cambia a visualización de bloque */
-    }
-
-    .descarga td {
-        display: block; /* Cambia a visualización de bloque */
-        text-align: center; /* Centra el contenido */
+        grid-template-columns: 1fr;
     }
 }
