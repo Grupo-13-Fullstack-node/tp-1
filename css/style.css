@@ -21,7 +21,12 @@ html {
     padding: 0;
     font-weight: normal;
   }
-  
+  .contenedor{
+    position: relative;
+    top:2rem;
+    /*Acá sólo modifique esto para no superponer la navbar*/
+  }
+
   ol, ul {
     list-style: none;
   }
