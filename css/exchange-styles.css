@@ -68,7 +68,14 @@
     width: 100%;
     border-collapse: inherit;
   }
-  
+  .exchange-tendencias.popular{
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .exchange-tendencias.popular:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
   .populares .popular {
     border-radius: 20px;
     padding: 28px 32px;
