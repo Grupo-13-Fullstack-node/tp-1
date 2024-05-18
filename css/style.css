@@ -38,6 +38,12 @@ html {
   *, *::before, *::after {
     border-spacing: 0;
   }
+  a {
+    color: var(--main-accent-color);
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 /* font classes */
 .roboto-light {
     font-family: "Roboto", sans-serif;
