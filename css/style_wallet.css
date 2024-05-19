@@ -30,7 +30,12 @@ p {
     margin: 10px 0;
 }
 
+/* video del banner de inicio */
+.funcionalidades video {
+    height:579px;
+   }
 /* Funcionalidades */
+
 .funcionalidades {
     margin-bottom: 40px;
 }

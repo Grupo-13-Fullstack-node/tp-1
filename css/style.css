@@ -23,8 +23,10 @@ html {
   }
   .contenedor{
     position: relative;
-    top:2rem;
+    /*top:2rem;*/
     /*Acá sólo modifique esto para no superponer la navbar*/
+    /* comentario de Uli: no es ideal usar top (propiedad de posicionamiento absoluto) para elemtnos que no son abssolutos, voy a poner un fix para la navbar distinto acá abajo porque el top estaba creando problemas en algunos escenarios*/
+
   }
 
   ol, ul {
@@ -177,6 +179,22 @@ nav ul li {
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+/* implementación de banner que puede ser usada en cualquier página del sitio*/
+.banner-hijo.media {
+     flex-basis:40%;    
+}
+.banner-hijo.texto {
+     flex-basis:60%;    
+}
+.fondo-lila {
+    background: #eeecfb;
+}
+.banner {
+     display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 
