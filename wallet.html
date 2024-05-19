@@ -14,25 +14,44 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
 
     <section id="navbar-container"></section>
-    <div class="contenedor">
-        <h1>Cripto Wallet</h1>
-        <p>Tu llave al mundo de las criptomonedas</p>                    
+    <!-- el contenedor externo lo pongo para ponerle un colo de fondo que tome todo el ancho de la pantalla  -->
+    <div class="contenedor-externo fondo-lila">
+        <!-- el contenedor settea el máximo ancho en el que transcurrirá el contenido, además está centrado (tiene margin auto a los lados) -->
+        <div class="contenedor">
+            <div class="banner funcionalidades">
+                <div class="banner-hijo texto">
+                    <h1>Cripto Wallet</h1>
+                    <p>Tu llave al mundo de las criptomonedas</p>                    
+                    <ul>
+                        <li class="wallet-funcionalidad">Almacena y gestiona todas tus criptomonedas, NFT y múltiples billeteras en un solo lugar</li>
+                        <li class="wallet-funcionalidad">Compatibilidad con Bitcoin, Ethereum, Solana, Dogecoin y todas las redes compatibles con Ethereum</li>
+                        <li class="wallet-funcionalidad">Explora miles de tokens y dapps en tu teléfono o navegador</li>
+                        <li class="wallet-funcionalidad">Protege tus activos digitales con opciones de seguridad líderes en la industria</li>
+                    </ul>
+                    <a class="boton" href="#descargas">Descargá el app</a>
+                </div>
+                <div class="banner-hijo media">
+                    <video loop autoplay muted>
+                        <source src="./img/imagenes-banners/banner-animation.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>    
+        </div>        
     </div>
-    <div class="contenedor funcionalidades">
-        <ul>
-            <li class="wallet-funcionalidad">Almacena y gestiona todas tus criptomonedas, NFT y múltiples billeteras en un solo lugar</li>
-            <li class="wallet-funcionalidad">Compatibilidad con Bitcoin, Ethereum, Solana, Dogecoin y todas las redes compatibles con Ethereum</li>
-            <li class="wallet-funcionalidad">Explora miles de tokens y dapps en tu teléfono o navegador</li>
-            <li class="wallet-funcionalidad">Protege tus activos digitales con opciones de seguridad líderes en la industria</li>
-        </ul>
+        
+    <div class="contenedor-externo margen-superior">
+        <div class="contenedor">
+            <h3 class="titulo">¿Por qué elegir {marca} para tu wallet?</h3>
+        </div>
     </div>
     
-    <h3 class="titulo">¿Por qué elegir {marca} para tu wallet?</h3>
+    
     <div class="contenedor cuatro-columnas">
         <div class="ventaja-item">
             <p class="ventaja-titulo">Controle sus criptomonedas</p>
@@ -55,32 +74,35 @@
             <img src="./img/icons8-billetera-32.png" alt="Ilustrativo" class="logo ilustrativo">
         </div>
     </div>
-
-    <div class="contenedor descarga">
-        <h2>¡Descargá la app ahora!</h2>
-    </div>
+    <div class="contenedor-externo margen-superior">
+        <div class="contenedor descarga" id="descargas">
+            <h2>¡Descargá la app ahora!</h2>
+        </div>
+        </div>
     <br>
-    <h3 class="titulo">Seleccioná tu sistema para descargar:</h3>
+    <div class="contenedor">
+        <h3 class="titulo">Seleccioná tu sistema para descargar:</h3>
+    </div>
     <div class="contenedor cuatro-columnas">
         <div class="descarga-item">
             <p class="descarga-titulo">Descarga para iOS</p>
             <p>Descarga el Wallet del App Store</p>
-            <img src="./img/app-store.png" alt="App Store Logo" class="logo iOS">
+            <img src="./img/app-store.png" alt="App Store Logo" class="logo iOS pointer">
         </div>
         <div class="descarga-item">
             <p class="descarga-titulo">Descarga para Android</p>
             <p>Descarga el Wallet desde el Play Store</p>
-            <img src="./img/play-store.png" alt="Play Store Logo" class="logo android">
+            <img src="./img/play-store.png" alt="Play Store Logo" class="logo android pointer">
         </div>
         <div class="descarga-item">
             <p class="descarga-titulo">Descarga para Chrome</p>
             <p>Descarga la extensión de Chrome desde el Chrome Web Store</p>
-            <img src="./img/google-chrome.png" alt="Chrome Logo" class="logo Chrome">
+            <img src="./img/google-chrome.png" alt="Chrome Logo" class="logo Chrome pointer">
         </div>
         <div class="descarga-item">
             <p class="descarga-titulo">Descarga para Firefox</p>
             <p>Descarga la extensión para Firefox desde el store</p>
-            <img src="./img/mozilla-firefox.png" alt="Firefox Logo" class="logo Firefox">
+            <img src="./img/mozilla-firefox.png" alt="Firefox Logo" class="logo Firefox pointer">
         </div>
     </div>
 
