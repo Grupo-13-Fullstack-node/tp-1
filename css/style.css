@@ -196,7 +196,7 @@ nav ul li {
     background: #eeecfb;
 }
 .banner {
-     display: flex;
+    display: flex;
     flex-wrap:wrap;
     align-items: center;
     justify-content: center;
@@ -232,7 +232,7 @@ h1 span {
 }
 /*cuatro columnas*/
 
-/* Sección de descarga y ventajas */
+/* Sección de columnas - confianza */
 .cuatro-columnas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -273,7 +273,30 @@ h1 span {
   font-size: 1.1rem;
   opacity: 0.7;
 }
-
+/* sección que promociona exchange */
+.contenedor-externo.exchange .contenedor {
+  padding: 60px 0px;
+}
+/* area de contenido lado a lado - botón hacia exchange */
+.areas-lado-a-lado {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+}
+.area.izquierda {
+  flex-basis: 82%;
+}
+.area.derecha {
+  flex-basis: 18%;
+}
+/* estilos del texto de sección promo exchange */
+.contenedor-externo.exchange h2 {
+  font-size: 2.7rem;
+  font-weight: 300;
+} 
+.contenedor-externo.exchange p {
+  font-size: 1.4rem;  
+}
 /* estadisticas */
 .contenedor-externo.margen-superior.fondo-oscuro {
   background: var(--main-accent-color);
