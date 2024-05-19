@@ -212,10 +212,24 @@ nav ul li {
 .margen-superior {
   padding-top: 40px;
 }
-.contenedor.home{
+.contenedor.home {
   padding-bottom: 0px;
 }
-
+/* banner principal home */
+.home h1 {
+    font-weight: 300;
+    font-size: 3.4rem;
+}
+h1 span {
+  font-weight: 500;
+}
+.home .banner-hijo.media {
+  flex-basis: 50%;
+  padding-right: 80px;
+}
+.home .banner-hijo.texto {
+  flex-basis: 50%;
+}
 /*cuatro columnas*/
 
 /* Sección de descarga y ventajas */
@@ -261,12 +275,12 @@ nav ul li {
 }
 
 /* estadisticas */
-.contenedor-externo.margen-superior.fondo-negro {
-  background: #000;
+.contenedor-externo.margen-superior.fondo-oscuro {
+  background: var(--main-accent-color);
   color: #fff;    
 }
-.contenedor-externo.margen-superior.fondo-negro p,
-.contenedor-externo.margen-superior.fondo-negro *{
+.contenedor-externo.margen-superior.fondo-oscuro p,
+.contenedor-externo.margen-superior.fondo-oscuro *{
   color: #fff;
 }
 
@@ -289,6 +303,7 @@ nav ul li {
   font-weight: 400;
 }
 
+
 .banner.registro p {
   font-size: 1.6rem;
 }
@@ -299,7 +314,11 @@ nav ul li {
 .banner.registro .banner-hijo.media {
   flex-basis:40%;
 }
-
+/* wallet banner */
+.wallet .contenedor {
+  padding-top: 60px;
+  padding-bottom: 0px;
+}
 /* disclaimer pre-footer */
 .disclaimer p {
   color: #000;
