@@ -188,7 +188,9 @@ nav ul li {
 }
 .banner-hijo.texto {
      flex-basis:70%;    
-     padding-right: 150px;
+}
+.banner-hijo:first-child {
+  padding-right: 150px;
 }
 .fondo-lila {
     background: #eeecfb;
@@ -210,6 +212,105 @@ nav ul li {
 .margen-superior {
   padding-top: 40px;
 }
+.contenedor.home{
+  padding-bottom: 0px;
+}
+
+/*cuatro columnas*/
+
+/* Sección de descarga y ventajas */
+.cuatro-columnas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.columna {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.columna:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.columna h3 {  
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.columna h3 {
+  font-size: 1.4rem;  
+  margin-bottom: 10px;
+  position: relative;
+  text-align: left;
+  margin-top: 15px;
+}
+.columna p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+/* estadisticas */
+.contenedor-externo.margen-superior.fondo-negro {
+  background: #000;
+  color: #fff;    
+}
+.contenedor-externo.margen-superior.fondo-negro p,
+.contenedor-externo.margen-superior.fondo-negro *{
+  color: #fff;
+}
+
+.stat {
+  height: 118px;
+  color: var(--main-text-color);
+  font-size: 3rem;
+  align-items: center;
+  display: inline-flex;
+  margin: 0px;
+}
+.stat p {
+  font-size: 0.9rem;
+}
+
+/* banner a registro */
+.home h2 {    
+  font-size: 3rem;
+  line-height: 3.1rem;
+  font-weight: 400;
+}
+
+.banner.registro p {
+  font-size: 1.6rem;
+}
+.banner.registro .banner-hijo.texto {
+  flex-basis: 50%;
+  padding-right: 180px;
+}
+.banner.registro .banner-hijo.media {
+  flex-basis:40%;
+}
+
+/* disclaimer pre-footer */
+.disclaimer p {
+  color: #000;
+  opacity: .5;
+  font-size: 0.8rem;
+}
+
+.disclaimer .contenedor {
+  padding-bottom: 0px;
+  padding-top: 50px;
+}
 
   /*media queries*/
   /* la decisión fue armar el responsive abordándolo como desktop first.
@@ -224,14 +325,15 @@ nav ul li {
     }
   }
 
-  /* ajustes para tablet*/
-  @media (max-width:992px) { 
-    
-
-  }
-  /* ajustes para mobile */
-  @media (max-width:768px) { 
-    
-  
-
-  }
+/* ajustes para tablet*/
+  @media (max-width: 992px) {
+    .cuatro-columnas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* ajustes para mobile */
+@media (max-width: 768px) {
+    .cuatro-columnas {
+        grid-template-columns: 1fr;
+    }
+}
