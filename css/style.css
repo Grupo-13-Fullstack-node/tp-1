@@ -28,7 +28,9 @@ html {
     /* comentario de Uli: no es ideal usar top (propiedad de posicionamiento absoluto) para elemtnos que no son abssolutos, voy a poner un fix para la navbar distinto acá abajo porque el top estaba creando problemas en algunos escenarios*/
 
   }
-
+  #navbar-container {
+    min-height: 2rem;
+  }
   ol, ul {
     list-style: none;
   }
@@ -182,10 +184,11 @@ nav ul li {
 }
 /* implementación de banner que puede ser usada en cualquier página del sitio*/
 .banner-hijo.media {
-     flex-basis:40%;    
+     flex-basis:30%;    
 }
 .banner-hijo.texto {
-     flex-basis:60%;    
+     flex-basis:70%;    
+     padding-right: 150px;
 }
 .fondo-lila {
     background: #eeecfb;
@@ -196,8 +199,17 @@ nav ul li {
     align-items: center;
     justify-content: center;
 }
+.banner ul {
+  margin-bottom: 40px;
+  padding-left: 0px;
+}
 
-
+.banner p {
+  font-size: 1.5rem;
+}
+.margen-superior {
+  padding-top: 40px;
+}
 
   /*media queries*/
   /* la decisión fue armar el responsive abordándolo como desktop first.
