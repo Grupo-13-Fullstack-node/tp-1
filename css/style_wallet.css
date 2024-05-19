@@ -6,6 +6,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    position: relative;
+    height: 100vh;
 }
 
 .contenedor {
@@ -59,7 +61,7 @@ p {
 
 .descarga-item, .ventaja-item {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -85,8 +87,8 @@ p {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-    text-align: left;
-    margin-left: 4rem;
+    position: relative;
+    text-align: center;
 }
 
 .logo {
@@ -95,8 +97,30 @@ p {
     transition: transform 0.3s ease;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .logo:hover {
     transform: scale(1.1);
+}
+
+/* Estilos del video */
+.video-container {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Animaciones */
