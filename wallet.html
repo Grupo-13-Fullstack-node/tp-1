@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cripto Wallet - Grupo 13</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/form-styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="css/style_wallet.css" rel="stylesheet" type="text/css" />
+    <link href="css/nav-style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+    
+    <!-- el contenedor externo lo pongo para ponerle un colo de fondo que tome todo el ancho de la pantalla  -->
+    <div class="contenedor-externo fondo-lila">
+        <nav class="navbar navbar-expand-lg fixed-top " id="navbar">
+            <div class="container-fluid">
+                <a href="./index.html" class="logo-animado" ><img src="./img/logo.png" alt="Cripto logo" width="30" height="30" class="d-inline-block align-text-top"></a>
+                <a class="navbar-brand" href="./index.html">Cripto</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="wallet.html">Wallets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active"  aria-current="page" href="exchange.html">Exchange</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/register.html">Registrate</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- el contenedor settea el máximo ancho en el que transcurrirá el contenido, además está centrado (tiene margin auto a los lados) -->
+        <div class="contenedor">
+            <div class="banner funcionalidades">
+                <div class="banner-hijo texto">
+                    <h1>Cripto Wallet</h1>
+                    <p>Tu llave al mundo de las criptomonedas</p>                    
+                    <ul>
+                        <li class="wallet-funcionalidad">Almacena y gestiona todas tus criptomonedas, NFT y múltiples billeteras en un solo lugar</li>
+                        <li class="wallet-funcionalidad">Compatibilidad con Bitcoin, Ethereum, Solana, Dogecoin y todas las redes compatibles con Ethereum</li>
+                        <li class="wallet-funcionalidad">Explora miles de tokens y dapps en tu teléfono o navegador</li>
+                        <li class="wallet-funcionalidad">Protege tus activos digitales con opciones de seguridad líderes en la industria</li>
+                    </ul>
+                    <a class="boton" href="#descargas">Descargá la app</a>
+                </div>
+                <div class="banner-hijo media">
+                    <video loop autoplay muted>
+                        <source src="./img/imagenes-banners/banner-animation.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>    
+        </div>        
+    </div>
+        
+    <div class="contenedor-externo margen-superior">
+        <div class="contenedor">
+            <h3 class="titulo">¿Por qué elegir {marca} para tu wallet?</h3>
+        </div>
+    </div>
+    
+    
+    <div class="contenedor cuatro-columnas">
+        <div class="ventaja-item">
+            <p class="ventaja-titulo">Controle sus criptomonedas</p>
+            <p>Coinbase Wallet es una billetera de autocustodia que le brinda control total de sus criptomonedas</p>
+            <img src="./img/icons8-llave-32.png" alt="Ilustrativo" class="logo ilustrativo">
+        </div>
+        <div class="ventaja-item">
+            <p class="ventaja-titulo">Almacena y gestiona tus NFT</p>
+            <p>Almacena y visualiza de forma segura todos tus NFT de Ethereum, Base, Optimism, Polygon y Solana en una sola billetera</p>
+            <img src="./img/icons8-organización-32.png" alt="Ilustrativo" class="logo ilustrativo">
+        </div>
+        <div class="ventaja-item">
+            <p class="ventaja-titulo">Seguridad líder del sector</p>
+            <p>Las opciones de seguridad adicionales en todos tus dispositivos y la compatibilidad con el dispositivo de billetera proporcionan más formas de mantener tus criptomonedas seguras</p>
+            <img src="./img/icons8-safebox-32.png" alt="Ilustrativo" class="logo ilustrativo">
+        </div>
+        <div class="ventaja-item">
+            <p class="ventaja-titulo">Trabaje con {Marca}</p>
+            <p>¿Ya eres cliente de Coinbase? Vincula tu cuenta de {Marca} a tu Wallet para acceder fácilmente a tus criptomonedas</p>
+            <img src="./img/icons8-billetera-32.png" alt="Ilustrativo" class="logo ilustrativo">
+        </div>
+    </div>
+    <div class="contenedor-externo margen-superior">
+        <div class="contenedor descarga" id="descargas">
+            <h2>¡Descargá la app ahora!</h2>
+        </div>
+        </div>
+    <br>
+    <div class="contenedor">
+        <h3 class="titulo">Seleccioná tu sistema para descargar:</h3>
+    </div>
+    <div class="contenedor cuatro-columnas">
+        <div class="descarga-item">
+            <p class="descarga-titulo">Descarga para iOS</p>
+            <p>Descarga el Wallet del App Store</p>
+            <img src="./img/app-store.png" alt="App Store Logo" class="logo iOS pointer">
+        </div>
+        <div class="descarga-item">
+            <p class="descarga-titulo">Descarga para Android</p>
+            <p>Descarga el Wallet desde el Play Store</p>
+            <img src="./img/play-store.png" alt="Play Store Logo" class="logo android pointer">
+        </div>
+        <div class="descarga-item">
+            <p class="descarga-titulo">Descarga para Chrome</p>
+            <p>Descarga la extensión de Chrome desde el Chrome Web Store</p>
+            <img src="./img/google-chrome.png" alt="Chrome Logo" class="logo Chrome pointer">
+        </div>
+        <div class="descarga-item">
+            <p class="descarga-titulo">Descarga para Firefox</p>
+            <p>Descarga la extensión para Firefox desde el store</p>
+            <img src="./img/mozilla-firefox.png" alt="Firefox Logo" class="logo Firefox pointer">
+        </div>
+    </div>
+    <div class="contenedor-externo disclaimer">
+        <div class="contenedor">
+            <p>
+                Al utilizar este Sitio, aceptas los Términos de servicio de {{Marca}}, las pautas de marca de {{Marca}} y todas las reglas y políticas de {{Marca}}, que pueden estar disponibles y actualizadas de vez en cuando. Todos los nombres de empresas, productos y servicios que se utilicen en este sitio son solo a fines de identificación y no se consideran promoción. Reconoce que {{Marca}} es el titular único de todas las marcas comerciales de {{Marca}} y se compromete a usar el contenido del sitio o las marcas de {{Marca}} solo con fines personales o comerciales. {{Marca}} puede revisar el uso de los materiales de marca en cualquier momento y se reserva el derecho de finalizar o modificar cualquier uso.
+            </p>   
+        </div>
+    </div>
+
+    <footer id="footer">   
+        <p className="text-footer">               
+            &copy; 2024 para Codo a Codo 
+            <a href="https://buenosaires.gob.ar/educacion/preguntas-frecuentes" target="_blank"><img src="/img/codoAcodo.png" alt="Logo codo a codo" class="img-footer"></a>
+            <span>| Grupo 13 </span> 
+        </p>
+</footer>
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+</html>
