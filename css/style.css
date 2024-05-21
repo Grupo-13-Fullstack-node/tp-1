@@ -404,4 +404,8 @@ h1 span {
     .cuatro-columnas {
         grid-template-columns: 1fr;
     }
+    h2, h3 {
+      word-break: break-all;
+
+  }
 }
