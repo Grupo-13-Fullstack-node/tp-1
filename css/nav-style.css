@@ -12,7 +12,7 @@
     backdrop-filter: blur(10px);
 }
 
-a {
+#navbar a {
     text-decoration: none !important;
 }
 
@@ -83,14 +83,14 @@ a {
         margin: 0 0 5px 30px;
     }
 
-    a {
+    #navbar a {
         text-decoration: none !important;
         background-color: rgba(147, 147, 173, 0) !important;
 
         /*relleno logo y <a> mantener transparencia en 0 */
     }
 
-    a,
+    #navbar a,
     nav ul li:hover {
         transform: scale(1.15);
         transition: 0.5s;
@@ -117,7 +117,7 @@ a {
         height: 1.5rem;
     }
 
-    a {
+    #navbar a {
         text-decoration: none !important;
         background-color: rgba(147, 147, 173, 0) !important;
         /*relleno logo y <a> mantener transparencia en 0*/

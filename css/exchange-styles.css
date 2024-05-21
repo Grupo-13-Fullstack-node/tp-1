@@ -183,6 +183,14 @@ Los mediaqueries entonces son armados con max-width, pasando por los breakpoints
 .tarjeta {
     margin-bottom: 20px;
 }
+.seccion.botones a {        
+  width: 100%;
+  display: block;
+}
+
+.seccion.botones a:first-child {
+  margin-bottom: 15px;
+}
 
 
 }
