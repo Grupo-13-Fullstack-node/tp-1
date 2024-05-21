@@ -5,28 +5,59 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Cripto - TP1 - Grupo 13</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="css/exchange-styles.css" rel="stylesheet" type="text/css" />
+    <title>Cripto - TP1 - Grupo 13</title>    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/nav-style.css" rel="stylesheet" type="text/css" />
+    <link href="css/form-styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/exchange-styles.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
 
-    <section id="navbar-container"></section>
-    <div class="contenedor ">
-        <h1>Cripto Exchange</h1>
-        <p> En nuestro sitio podés consultar algunas de las cotizaciones de activos cripto</p>                    
+    <nav class="navbar navbar-expand-lg fixed-top " id="navbar">
+        <div class="container-fluid">
+            <a href="./index.html" class="logo-animado" ><img src="./img/logo.png" alt="Cripto logo" width="30" height="30" class="d-inline-block align-text-top"></a>
+            <a class="navbar-brand" href="./index.html">Cripto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="wallet.html">Wallets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"  aria-current="page" href="exchange.html">Exchange</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/register.html">Registrate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="contenedor-externo ">
+        <div class="contenedor exchange">
+            <h1>Cripto Exchange</h1>
+            <p> En nuestro sitio podés consultar algunas de las cotizaciones de activos cripto</p>                    
+        </div>
     </div>
+    
     <div class="contenedor resumen-mercados">
         <h2>Resumen de mercados</h2>
     </div>
     <div class="contenedor tres-columnas">            
         <div class="exchange-tendencias tarjeta">
-            <h3>Tendencias</h3>
+            <h3><img src="img/tenencias.png" alt="logo de tenencias">Tendencias</h3>
             <table>                
                 <tr>
                     <td class="ranking-activo">1</td>
@@ -49,7 +80,7 @@
             </table>
         </div>
         <div class="exchange-tendencia tarjeta">
-            <h3>Mayores ganancias</h3>
+            <h3><img src="img/ganancias.png" alt="logo de ganancias"> Mayores ganancias</h3>
             <table>                
                 <tr>
                     <td class="ranking-activo">1</td>
@@ -59,38 +90,38 @@
                 </tr>
                 <tr>
                     <td class="ranking-activo">2</td>
-                    <td>   Activo </td>
-                    <td>   Precio </td>
-                    <td class="activo delta-positivo">   +xxxx.x% </td>
+                    <td>   SQD </td>
+                    <td>   $0.11376373 </td>
+                    <td class="activo delta-positivo">   +20.1% </td>
                 </tr>
                 <tr>
                     <td class="ranking-activo">3</td>
-                    <td>   Activo </td>
-                    <td>   Precio </td>
-                    <td class="activo delta-negativo">   +xxxx.x% </td>
+                    <td>   BOLT </td>
+                    <td>   $0.0243 </td>
+                    <td class="activo delta-positivo">   +19.6% </td>
                 </tr>
             </table>
         </div>
         <div class="exchange-tendencias tarjeta">
-            <h3>Mayores pérdidas</h3>
+            <h3><img src="img/perdidas.png" alt="logo de perdidas">Mayores pérdidas</h3>
             <table>                
                 <tr>
                     <td class="ranking-activo">1</td>
-                    <td>   Activo </td>
-                    <td>   Precio </td>
-                    <td class="activo delta-positivo">   +xxxx.x% </td>
+                    <td>   DDR </td>
+                    <td>   $0.1314153 </td>
+                    <td class="activo delta-negativo">   -40.2% </td>
                 </tr>
                 <tr>
                     <td class="ranking-activo">2</td>
-                    <td>   Activo </td>
-                    <td>   Precio </td>
-                    <td class="activo delta-positivo">   +xxxx.x% </td>
+                    <td>   NLK </td>
+                    <td>   $1.47837 </td>
+                    <td class="activo delta-negativo">   -34.5% </td>
                 </tr>
                 <tr>
                     <td class="ranking-activo">3</td>
-                    <td>   Activo </td>
-                    <td>   Precio </td>
-                    <td class="activo delta-negativo">   +xxxx.x% </td>
+                    <td>   BHC </td>
+                    <td>   $3.78 </td>
+                    <td class="activo delta-negativo">   -32.8% </td>
                 </tr>
             </table>
         </div>
@@ -100,20 +131,20 @@
     </div>
     <div class="contenedor tres-columnas populares">            
         <div class="exchange-tendencias popular">
-            <h3 class="activo">BTC</h3>
-            <p class="precio">$63,119.64</p>
-            <p class="variacion negativo">-0.21%</p>
+            <h3 class="activo"><img src="img/logo_BTC.png">BTC</h3>
+            <p class="precio">$66,779.78</p>
+            <p class="variacion negativo">-0.05%</p>
 
             
         </div>
-        <div class="exchange-tendencia popular">
-            <h3 class="activo">ETH</h3>
+        <div class="exchange-tendencias popular">
+            <h3 class="activo"><img src="img/logo_ETH.png">ETH</h3>
             <p class="precio">$386.86</p>
             <p class="variacion positivo">-1.30%</p>
             
         </div>
         <div class="exchange-tendencias popular">
-            <h3 class="activo">APE</h3>
+            <h3 class="activo"><img src="img/logo_APE.png">APE</h3>
             <p class="precio">$1.29</p>
             <p class="variacion positivo">-1.65%</p>
             
@@ -123,8 +154,8 @@
 
     <div class="seccion botones">
         <div class="contenedor centrado">            
-                <a href="#" class="boton registro">Registrate para ver más</a>
-                <a href="#" class="">Conocer sobre la wallet</a>            
+                <a href="/register.html" class="boton registro">Registrate para ver más</a>
+                <a href="/wallet.html" class="">Conocer sobre la wallet</a>            
         </div>
     </div>
     
@@ -155,7 +186,8 @@
                     <td>16,885,328</td>
                     <td>410</td>
                     <td><p>EUR,  GBP,  BRL</p></td>
-                    <td><img src="https://s3.coinmarketcap.com/generated/sparklines/exchanges/web/7d/usd/270.svg" alt="" class="grafico negativo"></td>
+                    <td><img src="img/exhange-graph/graph-8.svg" alt="gráfico de precio BInance exchange" class="grafico positivo"></td>
+
                 </tr>
                 <tr>
                     <td>Coinbase Exchange</td>
@@ -165,7 +197,7 @@
                     <td>83,591</td>
                     <td>247</td>
                     <td><p>USD, EUR, GBP</p></td>
-                    <td><img src="https://s3.coinmarketcap.com/generated/sparklines/exchanges/web/7d/usd/89.svg" alt="89-price-graph" class="grafico negativo"></td>
+                    <td><img src="img/exhange-graph/graph-1.svg" alt="gráfico de precio CoinBase exchange" class="grafico negativo"></td>
                 </tr>
 
                 <tr>
@@ -176,97 +208,114 @@
                     <td>87,019,422</td>
                     <td>607</td>
                     <td><p>USD, EUR, GBP</p></td>
-                    <td><img src="https://s3.coinmarketcap.com/generated/sparklines/exchanges/web/7d/usd/521.svg" alt="521-price-graph" class="sc-14cb040a-0 dmOeak sc-14cb040a-1 euiFbX" loading="eager"></td>
+                    <td><img src="img/exhange-graph/graph-2.svg" alt="Gráfico de precio Bybit" class="grafico positivo"></td>
                 </tr>
 
                 <tr>
-                    <td>Coinbase Exchange</td>
-                    <td><p class="puntaje">8,2</p></td>
+                    <td>OKX</td>
+                    <td><p class="puntaje">7.7</p></td>
+                    <td>$1,046,093,783</td>
+                    <td>610</td>
+                    <td>5,982</td>
+                    <td>227</td>
+                    <td><p>USD, EUR, AUD</p></td>
+                    <td><img src="img/exhange-graph/graph-3.svg" alt="Gráfico de precio OKXt" class="grafico positivo"></td>
+                </tr>
+
+                <tr>
+                    <td>Upbit</td>
+                    <td><p class="puntaje">7.6</p></td>
+                    <td>$1,248,959,372</td>
+                    <td>512</td>
+                    <td>2,473,906</td>
+                    <td>302</td>
+                    <td><p>KRW</p></td>
+                    <td><img src="img/exhange-graph/graph-9.svg" alt="Gráfico de precio Upbit" class="grafico positivo"></td>
+                </tr>
+
+                <tr>
+                    <td>Kraken</td>
+                    <td><p class="puntaje">7,3</p></td>
+                    <td>$704,313,467</td>
+                    <td>754</td>
+                    <td>1,539,966</td>
+                    <td>247</td>
+                    <td><p>USD, EUR, GBP</p></td>
+                    <td><img src="img/exhange-graph/graph-1.svg" alt="Gráfico de precio Kraken exchange" class="grafico negativo"></td>
+                </tr>
+
+                <tr>
+                    <td>KuCoin</td>
+                    <td><p class="puntaje medio">6,9</p></td>
+                    <td>$640,225,482</td>
+                    <td>655</td>
+                    <td>1,583,541</td>
+                    <td>809</td>
+                    <td><p>USD, AED, ARS</p></td>
+                    <td><img src="img/exhange-graph/graph-5.svg" alt="Gráfico de precio KuCoin exchange" class="grafico positivo"></td>
+                </tr>
+
+                <tr>
+                    <td>Gate.io</td>
+                    <td><p class="puntaje medio">6,9</p></td>
+                    <td>$2,082,160,083</td>
+                    <td>977</td>
+                    <td>3,675,227</td>
+                    <td>182</td>
+                    <td><p>ALL, AUD, BRL</p></td>
+                    <td><img src="img/exhange-graph/graph-6.svg" alt="Gráfico de precio Gate.io exchange" class="grafico negativo"></td>
+                </tr>
+
+                <tr>
+                    <td>MEXC</td>
+                    <td><p class="puntaje medio">6,6</p></td>
+                    <td>$1,075,056,124</td>
+                    <td>567</td>
+                    <td>2,667,657</td>
+                    <td>2213</td>
+                    <td><p>USD, EUR, GBP</p></td>
+                    <td><img src="img/exhange-graph/graph-7.svg" alt="Gráfico de precio MEXC exchange" class="grafico negativo"></td>
+                </tr>
+
+                <tr>
+                    <td>Gemini</td>
+                    <td><p class="puntaje medio">6,4</p></td>
                     <td>$1,152,263,946</td>
                     <td>727</td>
                     <td>83,591</td>
                     <td>247</td>
                     <td><p>USD, EUR, GBP</p></td>
-                    <td><img src="https://s3.coinmarketcap.com/generated/sparklines/exchanges/web/7d/usd/89.svg" alt="89-price-graph" class="sc-14cb040a-0 dmOeak sc-14cb040a-1 euiFbX" loading="eager"></td>
-                </tr>
-
-                <tr>
-                    <td>Coinbase Exchange</td>
-                    <td><p class="puntaje">8,2</p></td>
-                    <td>$1,152,263,946</td>
-                    <td>727</td>
-                    <td>83,591</td>
-                    <td>247</td>
-                    <td><p>USD, EUR, GBP</p></td>
-                    <td><img src="https://s3.coinmarketcap.com/generated/sparklines/exchanges/web/7d/usd/89.svg" alt="89-price-graph" class="sc-14cb040a-0 dmOeak sc-14cb040a-1 euiFbX" loading="eager"></td>
-                </tr>
-
-                <tr>
-                    <td>Coinbase Exchange</td>
-                    <td><p class="puntaje">8,2</p></td>
-                    <td>$1,152,263,946</td>
-                    <td>727</td>
-                    <td>83,591</td>
-                    <td>247</td>
-                    <td><p>USD, EUR, GBP</p></td>
-                    <td><img src="https://s3.coinmarketcap.com/generated/sparklines/exchanges/web/7d/usd/89.svg" alt="89-price-graph" class="sc-14cb040a-0 dmOeak sc-14cb040a-1 euiFbX" loading="eager"></td>
-                </tr>
-
-                <tr>
-                    <td>Coinbase Exchange</td>
-                    <td><p class="puntaje">8,2</p></td>
-                    <td>$1,152,263,946</td>
-                    <td>727</td>
-                    <td>83,591</td>
-                    <td>247</td>
-                    <td><p>USD, EUR, GBP</p></td>
-                    <td><img src="https://s3.coinmarketcap.com/generated/sparklines/exchanges/web/7d/usd/89.svg" alt="89-price-graph" class="grafico negativo"></td>
-                </tr>
-
-                <tr>
-                    <td>Coinbase Exchange</td>
-                    <td><p class="puntaje">8,2</p></td>
-                    <td>$1,152,263,946</td>
-                    <td>727</td>
-                    <td>83,591</td>
-                    <td>247</td>
-                    <td><p>USD, EUR, GBP</p></td>
-                    <td><img src="https://s3.coinmarketcap.com/generated/sparklines/exchanges/web/7d/usd/89.svg" alt="89-price-graph" class="grafico negativo"></td>
-                </tr>
-
-                <tr>
-                    <td>Coinbase Exchange</td>
-                    <td><p class="puntaje">8,2</p></td>
-                    <td>$1,152,263,946</td>
-                    <td>727</td>
-                    <td>83,591</td>
-                    <td>247</td>
-                    <td><p>USD, EUR, GBP</p></td>
-                    <td><img src="https://s3.coinmarketcap.com/generated/sparklines/exchanges/web/7d/usd/89.svg" alt="89-price-graph" class="grafico negativo"></td>
-                </tr>
-
-                <tr>
-                    <td>Coinbase Exchange</td>
-                    <td><p class="puntaje">8,2</p></td>
-                    <td>$1,152,263,946</td>
-                    <td>727</td>
-                    <td>83,591</td>
-                    <td>247</td>
-                    <td><p>USD, EUR, GBP</p></td>
-                    <td><img src="https://s3.coinmarketcap.com/generated/sparklines/exchanges/web/7d/usd/89.svg" alt="89-price-graph" class="grafico negativo"></td>
+                    <td><img src="img/exhange-graph/graph-3.svg" alt="Gráfico de precio Gemini exchange" class="grafico positivo"></td>
                 </tr>
             
             </table>
         </div>
         </div>
     </div>
+    <!--
+        <div class="contenedor criptos">
+        <img src="/img/imagenes-banners/cripto-logos.png" src="podes comprar y vender muchisimas criptos distintas en nuestro exchange">
+    </div>
+    -->
+    <div class="contenedor-externo disclaimer">
+        <div class="contenedor">
+            <p>
+                Al utilizar este Sitio, aceptas los Términos de servicio de {{Marca}}, las pautas de marca de {{Marca}} y todas las reglas y políticas de {{Marca}}, que pueden estar disponibles y actualizadas de vez en cuando. Todos los nombres de empresas, productos y servicios que se utilicen en este sitio son solo a fines de identificación y no se consideran promoción. Reconoce que {{Marca}} es el titular único de todas las marcas comerciales de {{Marca}} y se compromete a usar el contenido del sitio o las marcas de {{Marca}} solo con fines personales o comerciales. {{Marca}} puede revisar el uso de los materiales de marca en cualquier momento y se reserva el derecho de finalizar o modificar cualquier uso.
+            </p>   
+        </div>
+    </div>
     <div class="seccion">
-   <section id="footer"></section>
+        <footer id="footer">   
+            <p className="text-footer">               
+                &copy; 2024 para Codo a Codo 
+                <a href="https://buenosaires.gob.ar/educacion/preguntas-frecuentes" target="_blank"><img src="/img/codoAcodo.png" alt="Logo codo a codo" class="img-footer"></a>
+                <span>| Grupo 13 </span> 
+            </p>
+    </footer>
         </div>
     </div>
 
     <!-- Zona script -->
-    <script src="js/NavBar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <!-- <script src="js/script.js"></script> -->
 
