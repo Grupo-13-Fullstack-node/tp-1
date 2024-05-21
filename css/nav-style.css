@@ -140,7 +140,7 @@
         font-size: .5rem;
     }
 
-    a,
+    #navbar a,
     nav ul li:hover {
         transform: scale(1.5);
         transition: 0.5s;
