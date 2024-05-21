@@ -275,7 +275,7 @@ h1 span {
 }
 /* sección que promociona exchange */
 .contenedor-externo.exchange .contenedor {
-  padding: 60px 0px;
+  padding: 60px 15px;
 }
 /* area de contenido lado a lado - botón hacia exchange */
 .areas-lado-a-lado {
@@ -371,6 +371,32 @@ h1 span {
   @media (max-width: 992px) {
     .cuatro-columnas {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .home .banner .banner-hijo,
+    .banner .banner-hijo {
+      flex-basis: 100%;
+    }
+    .home .contenedor {
+      padding: 30px 15px;
+    }
+    .area.izquierda {
+      flex-basis: 100%;
+    }
+    .area.derecha {
+      flex-basis: 100%;
+    }
+    .banner.registro .banner-hijo.texto {
+      flex-basis: 100%;
+      padding-right: 0px;
+    }
+    .home .wallet .contenedor {
+      padding-bottom: 0px;
+    }
+    .tablet-hide {
+      display: none;
+    }
+    .tablet-reverse {
+      flex-direction: column-reverse;
     }
 }
 /* ajustes para mobile */
