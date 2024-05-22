@@ -105,7 +105,7 @@ html {
 /* theming de elementos básicos */
 body, h1, h2, h3, h4, h5, p, a {
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     color: var(--main-text-color);
 }
@@ -124,6 +124,8 @@ a {
   padding: 8px 19px;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
 }
 .boton:hover {
   background-color: transparent;
@@ -188,6 +190,14 @@ nav ul li {
     display: flex;
     align-items: center;
 }
+/* classes para dar spacing arriba y abajo a las secciones, se utilizan en un elemento por fuera del contenedor */
+/* por ejemplo, para secciones con color de fondo que toma todo el ancho de la pantalla, las classes de espacing se aplican en el elemento que le da el color de fondo */
+.margen-superior {
+  padding-top: 40px;
+}
+.margen-inferior {
+  padding-bottom: 40px;
+}
 /* implementación de banner que puede ser usada en cualquier página del sitio*/
 .banner-hijo.media {
      flex-basis:30%;    
@@ -215,9 +225,6 @@ nav ul li {
 .banner p {
   font-size: 1.5rem;
 }
-.margen-superior {
-  padding-top: 40px;
-}
 .contenedor.home {
   padding-bottom: 0px;
 }
@@ -237,7 +244,6 @@ h1 span {
   flex-basis: 50%;
 }
 /*cuatro columnas*/
-
 /* Sección de columnas - confianza */
 .cuatro-columnas {
   display: grid;
@@ -314,29 +320,36 @@ h1 span {
 .contenedor-externo.margen-superior.fondo-oscuro *{
   color: #fff;
 }
-
 .stat {
-  height: 118px;
   color: var(--main-text-color);
   font-size: 3rem;
   align-items: center;
-  display: inline-flex;
   margin: 0px;
-}
-.stat p {
-  font-size: 0.9rem;
+  border-left: 1px solid #fff;
+  padding-left: 30px;
+  display: block;
 }
 
+.stat div {
+  font-size: 5rem;
+  line-height: 118px;
+  display: block;
+  width: 100%;
+}
+.stat p {
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;  
+}
 /* banner a registro */
 .home h2 {    
   font-size: 3rem;
   line-height: 3.1rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
-
 .banner.registro p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 .banner.registro .banner-hijo.texto {
   flex-basis: 50%;
@@ -372,6 +385,9 @@ h1 span {
   @media screen and (max-width:1440px) { 
     .contenedor {
       padding: 20px 15px;
+    }
+    .stat div {
+      font-size: 4.8rem; 
     }
   }
 
@@ -409,9 +425,18 @@ h1 span {
 }
 /* ajustes para mobile */
 @media (max-width: 768px) {
-    .cuatro-columnas {
-        grid-template-columns: 1fr;
-    }    
+  .margen-superior {
+    padding-top: 30px;
+  }
+  .margen-inferior {
+    padding-bottom: 30px;
+  }
+  .cuatro-columnas {
+      grid-template-columns: 1fr;
+  }
+  .stat div {
+    font-size: 4rem; 
+  }    
 }
 
 @media (max-width: 480px) {
