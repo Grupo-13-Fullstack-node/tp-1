@@ -411,5 +411,11 @@ h1 span {
 @media (max-width: 768px) {
     .cuatro-columnas {
         grid-template-columns: 1fr;
-    }
+    }    
 }
+
+@media (max-width: 480px) {
+  h2, h3 {
+    word-break: break-all;
+  }  
+ }
