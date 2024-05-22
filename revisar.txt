@@ -1,3 +1,0 @@
--revisar comprtamiento fixed en nav en res < 1000
--comportamiento login
--ver validacion en nav del login-
