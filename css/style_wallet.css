@@ -154,6 +154,10 @@ p {
     .contenedor {
         margin-top: 30px;
     }
+    .banner-hijo:first-child {
+        width: 100%;
+        padding-right: 10px;
+    }
     .texto {
         order: 2;
     }
@@ -165,6 +169,13 @@ p {
 @media (max-width: 768px) {
     .cuatro-columnas {
         grid-template-columns: 1fr;
+    }
+    .contenedor {
+        margin-top: 30px;
+    }
+    .banner-hijo:first-child {
+        width: 100%;
+        padding-right: 10px;
     }
     .texto {
         order: 2;
