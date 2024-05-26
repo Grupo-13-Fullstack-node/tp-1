@@ -21,11 +21,11 @@ html {
     padding: 0;
     font-weight: normal;
   }
-  .contenedor{
-    position: relative;
-    /*top:2rem;*/
-    /*Acá sólo modifique esto para no superponer la navbar*/
-    /* comentario de Uli: no es ideal usar top (propiedad de posicionamiento absoluto) para elemtnos que no son abssolutos, voy a poner un fix para la navbar distinto acá abajo porque el top estaba creando problemas en algunos escenarios*/
+  .contenedor {
+    position: relative;  
+  }
+  #navbar-container {
+    min-height: 2rem;
 
   }
   #navbar-container {
@@ -41,6 +41,12 @@ html {
   }
   *, *::before, *::after {
     border-spacing: 0;
+  }
+  a {
+    color: var(--main-accent-color);
+  }
+  a:hover {
+    text-decoration: underline;
   }
   a {
     color: var(--main-accent-color);
@@ -99,7 +105,7 @@ html {
 /* theming de elementos básicos */
 body, h1, h2, h3, h4, h5, p, a {
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     color: var(--main-text-color);
 }
@@ -118,6 +124,8 @@ a {
   padding: 8px 19px;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
 }
 .boton:hover {
   background-color: transparent;
@@ -182,19 +190,29 @@ nav ul li {
     display: flex;
     align-items: center;
 }
+/* classes para dar spacing arriba y abajo a las secciones, se utilizan en un elemento por fuera del contenedor */
+/* por ejemplo, para secciones con color de fondo que toma todo el ancho de la pantalla, las classes de espacing se aplican en el elemento que le da el color de fondo */
+.margen-superior {
+  padding-top: 40px;
+}
+.margen-inferior {
+  padding-bottom: 40px;
+}
 /* implementación de banner que puede ser usada en cualquier página del sitio*/
 .banner-hijo.media {
      flex-basis:30%;    
 }
 .banner-hijo.texto {
      flex-basis:70%;    
-     padding-right: 150px;
+}
+.banner-hijo:first-child {
+  padding-right: 150px;
 }
 .fondo-lila {
     background: #eeecfb;
 }
 .banner {
-     display: flex;
+    display: flex;
     flex-wrap:wrap;
     align-items: center;
     justify-content: center;
@@ -207,8 +225,154 @@ nav ul li {
 .banner p {
   font-size: 1.5rem;
 }
-.margen-superior {
-  padding-top: 40px;
+.contenedor.home {
+  padding-bottom: 0px;
+}
+/* banner principal home */
+.home h1 {
+    font-weight: 300;
+    font-size: 3.4rem;
+}
+h1 span {
+  font-weight: 500;
+}
+.home .banner-hijo.media {
+  flex-basis: 50%;
+  padding-right: 80px;
+}
+.home .banner-hijo.texto {
+  flex-basis: 50%;
+}
+/*cuatro columnas*/
+/* Sección de columnas - confianza */
+.cuatro-columnas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.columna {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.columna:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.columna h3 {  
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.columna h3 {
+  font-size: 1.4rem;  
+  margin-bottom: 10px;
+  position: relative;
+  text-align: left;
+  margin-top: 15px;
+}
+.columna p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+/* sección que promociona exchange */
+/*pendiente de final review post merge*/
+.contenedor-externo.exchange .contenedor {
+  padding: 60px 0px;
+  padding: 60px 15px;
+}
+/* area de contenido lado a lado - botón hacia exchange */
+.areas-lado-a-lado {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+}
+.area.izquierda {
+  flex-basis: 82%;
+}
+.area.derecha {
+  flex-basis: 18%;
+}
+/* estilos del texto de sección promo exchange */
+.contenedor-externo.exchange h2 {
+  font-size: 2.7rem;
+  font-weight: 300;
+} 
+.contenedor-externo.exchange p {
+  font-size: 1.4rem;  
+}
+/* estadisticas */
+.contenedor-externo.margen-superior.fondo-oscuro {
+  background: var(--main-accent-color);
+  color: #fff;    
+}
+.contenedor-externo.margen-superior.fondo-oscuro p,
+.contenedor-externo.margen-superior.fondo-oscuro *{
+  color: #fff;
+}
+.stat {
+  color: var(--main-text-color);
+  font-size: 3rem;
+  align-items: center;
+  margin: 0px;
+  border-left: 1px solid #fff;
+  padding-left: 30px;
+  display: block;
+}
+
+.stat div {
+  font-size: 5rem;
+  line-height: 118px;
+  display: block;
+  width: 100%;
+}
+.stat p {
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;  
+}
+/* banner a registro */
+.home h2 {    
+  font-size: 3rem;
+  line-height: 3.1rem;
+  font-weight: 300;
+}
+
+.banner.registro p {
+  font-size: 1.5rem;
+}
+.banner.registro .banner-hijo.texto {
+  flex-basis: 50%;
+  padding-right: 180px;
+}
+.banner.registro .banner-hijo.media {
+  flex-basis:40%;
+}
+/* wallet banner */
+.wallet .contenedor {
+  padding-top: 60px;
+  padding-bottom: 0px;
+}
+/* disclaimer pre-footer */
+.disclaimer p {
+  color: #000;
+  opacity: .5;
+  font-size: 0.8rem;
+}
+
+.disclaimer .contenedor {
+  padding-bottom: 0px;
+  padding-top: 50px;
 }
 
   /*media queries*/
@@ -222,16 +386,61 @@ nav ul li {
     .contenedor {
       padding: 20px 15px;
     }
+    .stat div {
+      font-size: 4.8rem; 
+    }
   }
 
-  /* ajustes para tablet*/
-  @media (max-width:992px) { 
-    
-
+/* ajustes para tablet*/
+  @media (max-width: 992px) {
+    .cuatro-columnas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .home .banner .banner-hijo,
+    .banner .banner-hijo {
+      flex-basis: 100%;
+    }
+    .home .contenedor {
+      padding: 30px 15px;
+    }
+    .area.izquierda {
+      flex-basis: 100%;
+    }
+    .area.derecha {
+      flex-basis: 100%;
+    }
+    .banner.registro .banner-hijo.texto {
+      flex-basis: 100%;
+      padding-right: 0px;
+    }
+    .home .wallet .contenedor {
+      padding-bottom: 0px;
+    }
+    .tablet-hide {
+      display: none;
+    }
+    .tablet-reverse {
+      flex-direction: column-reverse;
+    }
+}
+/* ajustes para mobile */
+@media (max-width: 768px) {
+  .margen-superior {
+    padding-top: 30px;
   }
-  /* ajustes para mobile */
-  @media (max-width:768px) { 
-    
-  
-
+  .margen-inferior {
+    padding-bottom: 30px;
   }
+  .cuatro-columnas {
+      grid-template-columns: 1fr;
+  }
+  .stat div {
+    font-size: 4rem; 
+  }    
+}
+
+@media (max-width: 480px) {
+  h2, h3 {
+    word-break: break-all;
+  }  
+ }

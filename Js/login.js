@@ -19,32 +19,32 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    registerLink.addEventListener("click", function(event) {
-        //Este al final queda sin uso xq dejo desactivado el link asi que no hay forma de que se active el evento
-        if (!validateFields()) {
-            event.preventDefault();
-            alert("Por favor, complete los campos para continuar.");
-        }
-    });
+//     registerLink.addEventListener("click", function(event) {
+//         //Este al final queda sin uso xq dejo desactivado el link asi que no hay forma de que se active el evento
+//         if (!validateFields()) {
+//             event.preventDefault();
+//             alert("Por favor, complete los campos para continuar.");
+//         }
+//     });
 
-    emailInput.addEventListener("input", toggleRegisterLink);
-    passInput.addEventListener("input", toggleRegisterLink);
-    checkboxA.addEventListener("change", toggleRegisterLink);
-    checkboxB.addEventListener("change", toggleRegisterLink);
-    //recargo el enlace por si queda desactivado
-    toggleRegisterLink();
-});
+//     emailInput.addEventListener("input", toggleRegisterLink);
+//     passInput.addEventListener("input", toggleRegisterLink);
+//     checkboxA.addEventListener("change", toggleRegisterLink);
+//     checkboxB.addEventListener("change", toggleRegisterLink);
+//     //recargo el enlace por si queda desactivado
+//     toggleRegisterLink();
+// });
 
 
 //Con esto capturo usr y pass para llevarlo a la pág de "login exitoso" y tambien enlazo el botón para migrar de pag
-document.getElementById('login-button').addEventListener('click', function(event) {
-    event.preventDefault();
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('pass').value;
+// document.getElementById('login-button').addEventListener('click', function(event) {
+//     event.preventDefault();
+//     let email = document.getElementById('email').value;
+//     let password = document.getElementById('pass').value;
 
-    localStorage.setItem('email', email);
-    localStorage.setItem('pass', password);
+//     localStorage.setItem('email', email);
+//     localStorage.setItem('pass', password);
 
-    window.location.href = '/login-exitoso.html';
+//     window.location.href = '/login-exitoso.html';
+// });
 });
-
