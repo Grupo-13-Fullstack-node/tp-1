@@ -225,6 +225,9 @@ nav ul li {
 .banner p {
   font-size: 1.5rem;
 }
+body.home .fondo-lila {
+  padding-top: 40px;
+}
 .contenedor.home {
   padding-bottom: 0px;
 }
@@ -353,7 +356,6 @@ h1 span {
 }
 .banner.registro .banner-hijo.texto {
   flex-basis: 50%;
-  padding-right: 180px;
 }
 .banner.registro .banner-hijo.media {
   flex-basis:40%;
@@ -362,6 +364,12 @@ h1 span {
 .wallet .contenedor {
   padding-top: 60px;
   padding-bottom: 0px;
+}
+.wallet .banner.registro .banner-hijo.media {
+  align-self: flex-end;
+}
+.wallet .banner.registro .banner-hijo.texto {
+  padding-bottom: 20px;
 }
 /* disclaimer pre-footer */
 .disclaimer p {
