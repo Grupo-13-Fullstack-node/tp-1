@@ -4,6 +4,7 @@
     --main-text-color: #020202;
     --main-accent-color: rgb(85 24 197); /* principal color de acento = violeta oscuro */
     --main-hover-color: rgb(62 10 157); /* principal color de hover */
+    --bg-nav:rgba(147, 147, 173, 0.438);
   }
 
 /* Reseteo mínimo de estilos generales para normalizar espacios*/
